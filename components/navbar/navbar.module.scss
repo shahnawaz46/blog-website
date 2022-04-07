@@ -1,0 +1,102 @@
+@import '../../styles/scss_folder/mixin';
+@import '../../styles/scss_folder/var';
+
+.navbar-image {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.nav {
+    @include displayFlex(space-between);
+    height: 50px;
+    background: black;
+    color: white;
+    padding: 0px 50px;
+
+    ul {
+        list-style: none;
+        display: inline-flex;
+        height: 100%;
+
+        li {
+            font-size: $fontSize;
+            padding: 0px 15px;
+            margin: 0px 5px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+
+            &:hover {
+                background-color: red;
+            }
+
+        }
+    }
+}
+
+.input-div {
+    width: 300px;
+    background: white;
+    padding: 5px;
+    border-radius: 2px;
+    @include displayFlex(space-between);
+
+    input {
+        font-size: $fontSize;
+        width: 100%;
+        border: none;
+        margin-right: 10px;
+        outline: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 840px) {
+    .nav {
+        justify-content: center;
+    }
+
+    .input-div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .nav {
+        padding: 0px 10px;
+
+        ul {
+
+            li {
+                padding: 0px 5px;
+                // font-size: 1px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:380px) {
+    .navbar-image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+        }
+    }
+
+    .nav {
+        padding: 0px;
+
+        ul {
+
+            li {
+                font-size: 14px;
+                padding: 2px;
+            }
+        }
+    }
+}

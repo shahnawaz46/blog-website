@@ -1,0 +1,100 @@
+@import './scss_folder/mixin';
+@import './scss_folder/var';
+
+
+// css for show blog ( [slug].js )
+
+.blog-main-div {
+    max-width: 80%;
+    margin: 25px 0px;
+}
+
+.blog-heading {
+    width: 100%;
+    padding-bottom: 15px;
+
+    h2 {
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+}
+
+.blog-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin-top: 25px;
+}
+
+
+
+
+// css for create blog (create.js)
+
+.create-blog-div {
+    @include displayFlex(center);
+    margin: 40px 0px;
+}
+
+.create-blog-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-size: $BlogFontSize;
+        margin-bottom: 2px;
+        font-weight: 500;
+    }
+
+    input {
+        @include inputField;
+        width: 100%;
+        height: 35px;
+        margin-bottom: 20px;
+        font-size: $BlogFontSize;
+    }
+
+    textarea {
+        @include inputField;
+        resize: none;
+        margin-bottom: 15px;
+        font-size: $BlogFontSize;
+        padding-top: 5px;
+    }
+
+    button {
+        width: 200px;
+        height: 30px;
+        border: 1px solid rgb(156, 152, 152);
+        border-radius: 4px;
+        font-size: $BlogFontSize - 1px;
+        cursor: pointer;
+    }
+}
+
+
+// media query for show blog ( [slug].js )
+@media only screen and (max-width: 768px) {
+    .blog-main-div {
+        max-width: 90%;
+    }
+}
+
+
+// media query for create blog (create.js)
+@media only screen and (max-width: 768px) {
+    .create-blog-form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .create-blog-form {
+        width: 90%;
+    }
+}

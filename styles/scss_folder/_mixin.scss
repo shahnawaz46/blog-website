@@ -1,0 +1,13 @@
+@mixin displayFlex($justifyContent) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: center;
+}
+
+@mixin inputField {
+    border: 1px solid rgb(156, 152, 152);
+    border-radius: 4px;
+    outline: none;
+    padding: 0px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
